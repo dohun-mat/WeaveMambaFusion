@@ -18,6 +18,14 @@ We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scal
 ## install
 1. git clone https://github.com/dohun-mat/WeaveMambaFusion
 
+2. dcnv3를 설치(https://github.com/OpenGVLab/InternImage/tree/master/detection)
+```Shell
+  cd ./ops_dcnv3
+  sh ./make.sh
+  # unit test (should see all checking is True)
+  python test.py
+```
+
 ## data
 1. We also provide the organized dataset we used as in the above directory structure.
 Link: from [google cloud](https://drive.google.com/open?id=11UGV3nbVv1x9IC--_tK3Uxf7hA6rlbsS) or [baidu cloud](https://pan.baidu.com/s/1jIp9t30oYivrAvrgUgIoLQ) Password: ruck
