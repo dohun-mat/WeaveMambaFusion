@@ -4,7 +4,7 @@
 Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
 
 ## OverView
-Feature pyramid methods, from FPN to BiFPN, fuse multi-scale features only locally (summation or concatenation followed by convolution), which struggles to detect faces under unconstrained conditions—small scale, occlusion, extreme pose—since these require global cross-scale dependencies that local fusion cannot model.
+Feature pyramid methods, from FPN to BiFPN, fuse multi-scale features only locally (summation or concatenation followed by convolution), which struggles to detect faces under unconstrained conditions small scale, occlusion, extreme pose—since these require global cross-scale dependencies that local fusion cannot model.
 
 State space models such as Mamba offer global context at linear complexity, but only if the way the two pyramid scales are combined preserves cross-scale structure: summation collapses them before the scan, leaving nothing to exploit, while concatenation preserves both scales at far higher cost.
 
