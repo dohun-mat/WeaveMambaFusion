@@ -28,7 +28,8 @@ We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scal
 
 3. mamba설치
 ```Shell
-  /lib_mamba/kernels/selective_scan && pip install .
+  cd /lib_mamba/kernels/selective_scan
+  pip install --no-build-isolation --no-cache-dir -e .
 ```
 
 ## data
