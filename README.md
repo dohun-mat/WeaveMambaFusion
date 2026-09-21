@@ -26,6 +26,11 @@ We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scal
   python test.py
 ```
 
+3. mamba설치
+```Shell
+  /lib_mamba/kernels/selective_scan && pip install .
+```
+
 ## data
 1. We also provide the organized dataset we used as in the above directory structure.
 Link: from [google cloud](https://drive.google.com/open?id=11UGV3nbVv1x9IC--_tK3Uxf7hA6rlbsS) or [baidu cloud](https://pan.baidu.com/s/1jIp9t30oYivrAvrgUgIoLQ) Password: ruck
