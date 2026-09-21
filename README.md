@@ -3,7 +3,11 @@
 ## official implement of Paper
 Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
 
+## OverView
+<img width="3121" height="538" alt="figure0-featuremap_WVsywWv7" src="https://github.com/user-attachments/assets/2f0a076a-b737-44d5-ae44-1e0b69ce2242" />
+
 ~~~~~~
+<img width="5789" height="3886" alt="model-architeture_BARuu0w5" src="https://github.com/user-attachments/assets/106c602d-0c87-4082-ae13-6e44bb26a7ea" />
 
 ## Architecture
 ~~~~~~
