@@ -161,6 +161,7 @@ cython_debug/
 # Exclude specific folders
 data/widerface
 data/FDDB
+fddb_evaluate
 results/
 widerface_evaluate/widerface_txt
 wandb/
