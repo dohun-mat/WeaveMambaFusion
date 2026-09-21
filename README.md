@@ -6,9 +6,6 @@ Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
 ## OverView
 <img width="3121" height="538" alt="figure0-featuremap_WVsywWv7" src="https://github.com/user-attachments/assets/2f0a076a-b737-44d5-ae44-1e0b69ce2242" />
 
-~~~~~~
-
-
 ## Architecture
 <img width="900" alt="model-architecture" src="https://github.com/user-attachments/assets/70daa796-7e93-4bab-9654-93ef6eff3676" />
 
