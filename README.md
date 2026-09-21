@@ -37,13 +37,13 @@ ps: wider_val.txt only include val file names but not label information.
   ```
 
 
-## 평가
+## Evaluation
 1. Generate txt file
 ```Shell
-원본 이미지만 사용하고 싶을때
+When you want to use only the original image
 CUDA_VISIBLE_DEVICES=1 python test_widerface.py --trained_model ./weights/eresnet_Final.pth --network eresnet
 
-multi-전략을 사용하고 싶을때
+When you want to use the multi-scale strategy
 CUDA_VISIBLE_DEVICES=1 python test_widerface_multi_scale.py --trained_model ./weights/eresnet_Final.pth --network eresnet --test_scales 0.5 1.0 1.5 2.0 --do_flip 
 ```
 2. Evaluate txt results. Demo come from [Here](https://github.com/wondervictor/WiderFace-Evaluation)  
