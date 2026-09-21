@@ -11,7 +11,6 @@ Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
 
 ## Architecture
 <img width="900" alt="model-architecture" src="https://github.com/user-attachments/assets/70daa796-7e93-4bab-9654-93ef6eff3676" />
-~~~
 
 ## install
 1. git clone https://github.com/dohun-mat/WeaveMambaFusion
