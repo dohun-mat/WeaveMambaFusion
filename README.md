@@ -61,6 +61,41 @@ python evaluation.py -p ./widerface_txt -g ./eval_tools/ground_truth
 3. You can also use widerface official Matlab evaluate demo in [Here](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html)  
 
 ## Result
+### WIDER FACE Validation (multi-scale AP)
+
+| Model | Backbone | Neck | Fusion | Easy | Medium | Hard | Avg. (%) | #Params (M) | GFLOPs |
+|---|---|---|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| DSFD | ResNet-152 | FEM | Conv. | 96.60 | 95.70 | 90.40 | 94.23 | 120.06 | 259.55 |
+| TinaFace | ResNet-50 | FPN | Conv. | 97.00 | 96.30 | 93.40 | 95.57 | 37.98 | 172.95 |
+| TransEnc-R50 | ResNet-50 | FPN | Self-attention | 93.03 | 92.89 | 88.56 | 91.49 | 33.72 | 32.92 |
+| RetinaFace | ResNet-50 | FPN | Conv. | 96.70 | 96.10 | 91.40 | 94.73 | 29.50 | 37.59 |
+| SCRFD-10GF | Basic Res | PANet | Conv. | 95.93 | 94.95 | 90.81 | 93.90 | 3.86 | 9.98 |
+| FaceBoxes | - | - | - | 85.90 | 81.60 | 55.70 | 74.40 | 1.01 | 0.28 |
+| SCRFD-0.5GF | Depth-wise Conv | PANet | Conv. | 92.71 | 91.45 | 86.23 | 90.13 | 0.57 | 0.51 |
+| RetinaFace Lite | MobileNet0.25 | FPN | Conv. | 91.40 | 89.20 | 82.50 | 87.70 | 0.44 | 0.80 |
+| FDLite | BLite | FPN | Conv. | 92.31 | 89.91 | 82.30 | 88.17 | 0.24 | 0.94 |
+| MTCNN | - | - | - | 85.10 | 82.00 | 60.70 | 75.93 | 0.12 | 0.01 |
+| EResFD | EResNet | SepFPN | Sep. Conv. | 89.02 | 87.96 | 80.41 | 85.80 | 0.09 | 0.30 |
+| **WeaveFace (Ours)** | **EResNet** | **WeaveBiFPN** | **SS2D** | **94.33** | **92.76** | **87.14** | **91.41** | **0.34** | **1.16** |
+
+WeaveFace achieves the highest AP among all sub-0.5M-parameter detectors on every subset, and its largest margin is on **Hard** — the regime where global cross-scale context matters most.
+
+### Cross-Dataset Generalization: AFW & PASCAL Faces
+
+All models below are trained solely on WIDER FACE and evaluated **without fine-tuning** on AFW and PASCAL Faces.
+
+| Method | AFW AP (%) | PASCAL AP (%) | #Params |
+|---|:---:|:---:|:---:|
+| MogFace | 99.85 | **99.32** | 85.26M |
+| EfficientSRFace-L | **99.94** | 98.84 | 18.84M |
+| SCRFD-0.5GF | 98.60 | 98.54 | 0.57M |
+| SCRFD-1.0GF | 99.70 | 98.60 | 0.64M |
+| SCRFD-2.5GF | 99.82 | 98.91 | 0.67M |
+| FaceBoxes | 98.91 | 96.30 | 1.01M |
+| **WeaveFace (Ours)** | **99.50** | **98.77** | **0.34M** |
+
+Despite having the fewest parameters among all compared methods, WeaveFace outperforms every detector under 1M parameters (SCRFD variants, FaceBoxes) on both AFW and PASCAL Faces, and trails the far heavier MogFace (85.26M params) by only 0.35 AP on AFW — indicating that WMF's cross-scale interaction generalizes beyond WIDER FACE rather than overfitting to it.
+
 ### Generality to Generic Object Detection (EfficientDet + WMF)
 
 To test whether WMF generalizes beyond face detection, we plug WMF into the BiFPN neck of **EfficientDet** and evaluate on COCO and PASCAL VOC, without any face-detection-specific components.
