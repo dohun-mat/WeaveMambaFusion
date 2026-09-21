@@ -60,4 +60,24 @@ python evaluation.py -p ./widerface_txt -g ./eval_tools/ground_truth
 ```
 3. You can also use widerface official Matlab evaluate demo in [Here](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html)  
 
+## Result
+### Generality to Generic Object Detection (EfficientDet + WMF)
+
+To test whether WMF generalizes beyond face detection, we plug WMF into the BiFPN neck of **EfficientDet** and evaluate on COCO and PASCAL VOC, without any face-detection-specific components.
+
+**COCO val2017**
+
+| Variant | AP | AP50 | AP75 | #Params (M) | FLOPs (G) |
+|---|:---:|:---:|:---:|:---:|:---:|
+| EfficientDet (baseline) | 34.5 | 52.9 | 36.6 | 3.88 | 2.57 |
+| **EfficientDet + WMF** | **36.2** | **53.6** | **38.2** | 4.25 | 3.21 |
+
+**PASCAL VOC**
+
+| Variant | mAP | #Params (M) | FLOPs (G) |
+|---|:---:|:---:|:---:|
+| EfficientDet (baseline) | 76.90 | 3.84 | 2.35 |
+| **EfficientDet + WMF** | **78.63** | 4.21 | 2.99 |
+
+Adding WMF to EfficientDet's BiFPN neck improves COCO AP by **+1.7** (34.5% → 36.2%) and AP75 by **+1.6**, indicating better localization quality in addition to higher overall accuracy. On PASCAL VOC, WMF improves mAP by **+1.73** (76.90% → 78.63%). Both gains come at a modest cost of roughly +0.37M parameters and +0.64–0.71 GFLOPs, confirming that WMF's benefit is not specific to face detection and transfers to generic object detection.
 
