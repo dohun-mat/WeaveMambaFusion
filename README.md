@@ -1,4 +1,4 @@
-# WeaveMambaFusion
+# WeaveMambaFusion(ACCV 2026)
 
 ## official implement of Paper
 Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
