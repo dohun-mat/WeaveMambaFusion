@@ -18,7 +18,7 @@ We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scal
 ## install
 1. git clone https://github.com/dohun-mat/WeaveMambaFusion
 
-2. dcnv3를 설치(https://github.com/OpenGVLab/InternImage/tree/master/detection)
+2. Install DCNv3
 ```Shell
   cd ./ops_dcnv3
   sh ./make.sh
@@ -26,9 +26,9 @@ We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scal
   python test.py
 ```
 
-3. mamba설치
+3. Install Mamba SSM kernel (selective scan)
 ```Shell
-  cd /lib_mamba/kernels/selective_scan
+  cd ./lib_mamba/kernels/selective_scan
   pip install --no-build-isolation --no-cache-dir -e .
 ```
 
