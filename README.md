@@ -10,7 +10,7 @@ Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
 
 
 ## Architecture
-<img width="5789" height="3886" alt="model-architeture_BARuu0w5" src="https://github.com/user-attachments/assets/70daa796-7e93-4bab-9654-93ef6eff3676" />
+<img width="900" alt="model-architecture" src="https://github.com/user-attachments/assets/70daa796-7e93-4bab-9654-93ef6eff3676" />
 ~~~
 
 ## install
