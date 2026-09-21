@@ -9,6 +9,7 @@ Feature pyramid methods, from FPN to BiFPN, fuse multi-scale features only local
 State space models such as Mamba offer global context at linear complexity, but only if the way the two pyramid scales are combined preserves cross-scale structure: summation collapses them before the scan, leaving nothing to exploit, while concatenation preserves both scales at far higher cost.
 
 We propose Weave Mamba Fusion (WMF), which interleaves two adjacent pyramid scales column by column so that every step of a horizontal bidirectional SS2D scan moves from one scale to the other. With partial-channel processing and parameter-free de-weaving, WMF enables efficient global cross-scale interaction while preserving feature structure. Integrating WMF into every fusion node yields WeaveBiFPN, the neck of our WeaveFace detector. On WIDER FACE, WeaveFace achieves 91.41% mean AP with only 0.34M parameters and 1.16 GFLOPs, outperforming prior detectors under 0.5M parameters, with its largest gains on the Hard subset (87.14% AP).
+
 <img width="3121" height="538" alt="figure0-featuremap_WVsywWv7" src="https://github.com/user-attachments/assets/2f0a076a-b737-44d5-ae44-1e0b69ce2242" />
 
 ## Architecture
