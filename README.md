@@ -1,7 +1,8 @@
 # WeaveMambaFusion(ACCV 2026)
 
 ## official implement of Paper
-Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection
+Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection - [link](http://arxiv.org/abs/2610.05865)
+
 
 ## OverView
 Feature pyramid methods, from FPN to BiFPN, fuse multi-scale features only locally (summation or concatenation followed by convolution), which struggles to detect faces under unconstrained conditions small scale, occlusion, extreme pose since these require global cross-scale dependencies that local fusion cannot model.
