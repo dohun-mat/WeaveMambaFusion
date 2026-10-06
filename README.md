@@ -1,7 +1,7 @@
 # WeaveMambaFusion(ACCV 2026)
 
 ## official implement of Paper
-Kim, D.; Jung, J. Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection - [link](http://arxiv.org/abs/2610.05865)
+Kim, D.; Jung, J. Weave Mamba Fusion : Weave Mamba Fusion Global Cross-Scale Interaction for Lightweight Face Detection - [link](http://arxiv.org/abs/2610.05865)
 
 
 ## OverView
